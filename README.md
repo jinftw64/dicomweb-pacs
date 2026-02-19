@@ -13,7 +13,36 @@ No need for a server, try the [standalone desktop edition](https://github.com/kn
 
 ## Prerequisite
 
-* nodejs 12 or newer
+* nodejs 20 or newer (for running from source)
+* Docker and Docker Compose (for containerized deployment)
+
+## Setup Instructions - Docker (recommended)
+
+* clone repository:
+  ```
+  git clone https://github.com/knopkem/dicomweb-pacs.git
+  cd dicomweb-pacs
+  ```
+
+* start with Docker Compose:
+  ```
+  docker compose up -d
+  ```
+
+* this will build the image and start the server with:
+  * OHIF viewer on `http://localhost:5001`
+  * DIMSE SCP on port `8888` (AET: `DICOMWEB_PACS`)
+  * persistent volumes for `data/`, `logs/`, and `import/`
+
+* stop the server:
+  ```
+  docker compose down
+  ```
+
+* rebuild after changes:
+  ```
+  docker compose up -d --build
+  ```
 
 ## Setup Instructions - npm
 
