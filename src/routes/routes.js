@@ -19,6 +19,14 @@ function applyDefault(json, tag, vr, defaultValue) {
   return rsp;
 }
 
+function sortByInstanceNumber(results) {
+  return results.sort((a, b) => {
+    const aNum = parseInt(a['00200013']?.Value?.[0] || '0', 10);
+    const bNum = parseInt(b['00200013']?.Value?.[0] || '0', 10);
+    return aNum - bNum;
+  });
+}
+
 // just make sure these have some sane defaults (while actually these are depending on the type and the viewer should cope with it, but OHIF doesn't)
 function fixResponse(json) {
   const rspArray = [];
@@ -77,7 +85,7 @@ module.exports = function routes(server, opts, done) {
 
     const json = await utils.doFind('IMAGE', query, tags);
     reply.header('Content-Type', 'application/dicom+json');
-    return json;
+    return sortByInstanceNumber(json);
   });
 
   //------------------------------------------------------------------
@@ -92,7 +100,7 @@ module.exports = function routes(server, opts, done) {
 
     const json = await utils.doFind('IMAGE', query, [...stTags, ...serTags, ...imTags]);
     reply.header('Content-Type', 'application/dicom+json');
-    return fixResponse(json);
+    return sortByInstanceNumber(fixResponse(json));
   });
 
   //------------------------------------------------------------------
