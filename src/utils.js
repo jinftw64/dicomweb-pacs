@@ -3,7 +3,18 @@ const dict = require('dicom-data-dictionary');
 const dimse = require('dicom-dimse-native');
 const dict2 = require('@iwharris/dicom-data-dictionary');
 const fs = require('fs');
+const path = require('path');
 const shell = require('shelljs');
+
+// Per-file lock map to serialize concurrent recompression of the same file
+const fileLocks = new Map();
+
+function withFileLock(key, fn) {
+  const prev = fileLocks.get(key) || Promise.resolve();
+  const next = prev.then(() => fn(), () => fn());
+  fileLocks.set(key, next.catch(() => {}));
+  return next;
+}
 
 // make sure default directories exist
 const logDir = config.get('logDir');
@@ -183,33 +194,51 @@ const utils = {
     '00200037',
   ],
   compressFile: (inputFile, outputDirectory, transferSyntax) => {
-    const j = {
-      sourcePath: inputFile,
-      storagePath: outputDirectory,
-      writeTransfer: transferSyntax || config.get('transferSyntax'),
-      verbose: config.get('verboseLogging'),
-      enableRecompression: true,
-    };
-    return new Promise((resolve, reject) => {
-      dimse.recompress(j, (result) => {
-        if (result && result.length > 0) {
-          try {
-            const json = JSON.parse(result);
-            if (json.code === 0) {
-              resolve();
-            } else {
-              logger.error(`recompression failure (${inputFile}): ${json.message}`);
-              reject();
+    const ts = transferSyntax || config.get('transferSyntax');
+    const tsSafe = ts.replace(/\./g, '_');
+    const cacheDir = path.join(outputDirectory, '.cache', tsSafe);
+    const cachedFile = path.join(cacheDir, path.basename(inputFile));
+    const lockKey = `${inputFile}:${ts}`;
+
+    return withFileLock(lockKey, async () => {
+      // return cached file if it already exists
+      try {
+        await fs.promises.access(cachedFile);
+        return cachedFile;
+      } catch {
+        // not cached yet, proceed with recompression
+      }
+
+      shell.mkdir('-p', cacheDir);
+
+      return new Promise((resolve, reject) => {
+        const j = {
+          sourcePath: inputFile,
+          storagePath: cacheDir,
+          writeTransfer: ts,
+          verbose: config.get('verboseLogging'),
+          enableRecompression: true,
+        };
+        dimse.recompress(j, (result) => {
+          if (result && result.length > 0) {
+            try {
+              const json = JSON.parse(result);
+              if (json.code === 0) {
+                resolve(cachedFile);
+              } else {
+                logger.error(`recompression failure (${inputFile}): ${json.message}`);
+                reject(new Error(json.message));
+              }
+            } catch (error) {
+              logger.error(error);
+              logger.error(result);
+              reject(error);
             }
-          } catch (error) {
-            logger.error(error);
-            logger.error(result);
-            reject();
+          } else {
+            logger.error('invalid result received');
+            reject(new Error('invalid result received'));
           }
-        } else {
-          logger.error('invalid result received');
-          reject();
-        }
+        });
       });
     });
   },

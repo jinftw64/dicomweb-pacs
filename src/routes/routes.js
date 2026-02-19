@@ -137,17 +137,18 @@ module.exports = function routes(server, opts, done) {
       return `File ${pathname} not found!`;
     }
 
+    let cachedPath;
     try {
-      await utils.compressFile(pathname, studyPath, '1.2.840.10008.1.2'); // for now default to uncompressed
+      cachedPath = await utils.compressFile(pathname, studyPath, '1.2.840.10008.1.2'); // for now default to uncompressed
     } catch (error) {
       logger.error(error);
       reply.code(500);
       return `failed to compress ${pathname}`;
     }
 
-    // read file from file system
+    // read file from cache
     try {
-      const data = await fs.promises.readFile(pathname);
+      const data = await fs.promises.readFile(cachedPath);
       const dataset = dicomParser.parseDicom(data);
       const pixelDataElement = dataset.elements.x7fe00010;
       const buffer = Buffer.from(dataset.byteArray.buffer, pixelDataElement.dataOffset, pixelDataElement.length);
@@ -202,8 +203,9 @@ module.exports = function routes(server, opts, done) {
       return msg;
     }
 
+    let cachedPath;
     try {
-      await utils.compressFile(pathname, studyPath);
+      cachedPath = await utils.compressFile(pathname, studyPath);
     } catch (error) {
       logger.error(error);
       const msg = `failed to compress ${pathname}`;
@@ -211,9 +213,9 @@ module.exports = function routes(server, opts, done) {
       return msg;
     }
 
-    // read file from file system
+    // read file from cache
     try {
-      const data = await fs.promises.readFile(pathname);
+      const data = await fs.promises.readFile(cachedPath);
       reply.header('Content-Type', 'application/dicom+json');
       return data;
     } catch (error) {
