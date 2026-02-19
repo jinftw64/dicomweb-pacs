@@ -37,8 +37,9 @@ server.register(fastifyAutoload, {
   options: { prefix: '/viewer' },
 });
 
-server.setErrorHandler(async (err) => {
-  logger.error(err.message); // 'caught'
+server.setErrorHandler(async (err, request, reply) => {
+  logger.error(err.stack || err.message);
+  reply.code(err.statusCode || 500).send({ error: 'Internal Server Error' });
 });
 
 // log exceptions
@@ -66,14 +67,17 @@ closeWithGrace({ delay: 500 }, async ({ signal, err, manual }) => {
 
 const port = config.get('webserverPort');
 logger.info('starting...');
-server.listen({ port, host: '0.0.0.0' }, async (err, address) => {
-  if (err) {
-    await logger.error(err, address);
+
+(async () => {
+  try {
+    await server.listen({ port, host: '0.0.0.0' });
+    logger.info(`web-server listening on port: ${port}`);
+    utils.startScp();
+    utils.sendEcho();
+  } catch (err) {
+    logger.error(err);
     process.exit(1);
   }
-  logger.info(`web-server listening on port: ${port}`);
-  utils.startScp();
-  utils.sendEcho();
-});
+})();
 
 //------------------------------------------------------------------
