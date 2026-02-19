@@ -29,14 +29,17 @@ No need for a server, try the [standalone desktop edition](https://github.com/kn
 
 ## Setup Instructions - source
 
-* clone repository and install dependencies  
+* clone repository and install dependencies
   ```npm install```
 
-* update config file located in:  
+* update config file located in:
   ```./config```
 
-* run:  
+* run:
   ```npm start```
+
+* run tests:
+  ```npm test```
 
 * import DICOM images: use any c-store-scu to push to internal store-scp  
   ```(AET: DICOMWEB_PACS   port: 8888)```
@@ -72,6 +75,12 @@ No need for a server, try the [standalone desktop edition](https://github.com/kn
 
 * update webserver port:  
   ```config.webserverPort = 5001;```
+
+## Security
+
+* DICOM UID parameters are validated (digits and dots only, max 64 characters) to prevent path traversal attacks
+* File paths are resolved and checked against the storage directory before access
+* Error responses return generic messages without leaking filesystem paths or internal details
 
 ## License
 MIT
