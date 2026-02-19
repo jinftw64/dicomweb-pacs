@@ -1,4 +1,4 @@
-*.dcm
+#*.dcm
 .node-persist
 config/development.js
 config/production.js
