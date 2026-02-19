@@ -1,0 +1,11 @@
+services:
+  dicomweb-pacs:
+    build: .
+    ports:
+      - "5001:5001"
+      - "8888:8888"
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./import:/app/import
+    restart: unless-stopped

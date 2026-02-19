@@ -1,0 +1,10 @@
+node_modules
+.git
+tests/
+data/
+logs/
+import/
+vitest.config.js
+README.md
+.eslintrc*
+.prettierrc*
