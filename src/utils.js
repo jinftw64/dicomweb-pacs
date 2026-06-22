@@ -33,6 +33,18 @@ const manager = require('simple-node-logger').createLogManager();
 manager.createRollingFileAppender(opts);
 const logger = manager.createLogger();
 
+// QIDO C-FIND resilience tunables. The DICOMweb query path opens a fresh DIMSE
+// association to the local SCP for every request; under load the SCP can
+// transiently reject associations ("DUL Association Rejected"). Retry a few
+// times before giving up so a recoverable hiccup never surfaces as an empty
+// study list, and time-box each attempt so a never-finishing query can't hang.
+// Overridable via optional config keys without touching code.
+const QIDO_MAX_ATTEMPTS = config.has('qidoMaxAttempts') ? config.get('qidoMaxAttempts') : 3;
+const QIDO_RETRY_DELAY_MS = config.has('qidoRetryDelayMs') ? config.get('qidoRetryDelayMs') : 300;
+const QIDO_ATTEMPT_TIMEOUT_MS = config.has('qidoAttemptTimeoutMs')
+  ? config.get('qidoAttemptTimeoutMs')
+  : 15000;
+
 //------------------------------------------------------------------
 
 const findDicomName = (name) => {
@@ -243,7 +255,7 @@ const utils = {
       });
     });
   },
-  doFind: (queryLevel, query, defaults) => {
+  doFind: async (queryLevel, query, defaults) => {
     // add query retrieve level
     const j = {
       tags: [
@@ -307,36 +319,69 @@ const utils = {
 
     const offset = query.offset ? parseInt(query.offset, 10) : 0;
 
-    // run find scu and return json response
-    return new Promise((resolve) => {
-      dimse.findScu(j, (result) => {
-        if (result && result.length > 0) {
-          try {
-            const json = JSON.parse(result);
-            if (json.code === 0) {
-              const container = JSON.parse(json.container);
-              if (container) {
-                resolve(container.slice(offset));
+    // Run a single C-FIND. Resolves { status: 'ok', data } on success (code 0)
+    // or { status: 'fail' } on failure / invalid result / timeout. A 'pending'
+    // (code 1) response keeps waiting for the final response; the timeout is the
+    // backstop so a query that never finishes can't hang the request forever.
+    const attempt = () =>
+      new Promise((resolve) => {
+        let settled = false;
+        const finish = (value) => {
+          if (settled) return;
+          settled = true;
+          clearTimeout(timer);
+          resolve(value);
+        };
+        const timer = setTimeout(() => {
+          logger.error(`c-find timed out after ${QIDO_ATTEMPT_TIMEOUT_MS}ms`);
+          finish({ status: 'fail' });
+        }, QIDO_ATTEMPT_TIMEOUT_MS);
+
+        dimse.findScu(j, (result) => {
+          if (result && result.length > 0) {
+            try {
+              const json = JSON.parse(result);
+              if (json.code === 0) {
+                const container = JSON.parse(json.container);
+                finish({ status: 'ok', data: container ? container.slice(offset) : [] });
+              } else if (json.code === 1) {
+                logger.info('query is pending...');
               } else {
-                resolve([]);
+                logger.error(`c-find failure: ${json.message}`);
+                finish({ status: 'fail' });
               }
-            } else if (json.code === 1) {
-              logger.info('query is pending...');
-            } else {
-              logger.error(`c-find failure: ${json.message}`);
-              resolve([]);
+            } catch (error) {
+              logger.error(error);
+              logger.error(result);
+              finish({ status: 'fail' });
             }
-          } catch (error) {
-            logger.error(error);
-            logger.error(result);
-            resolve([]);
+          } else {
+            logger.error('invalid result received');
+            finish({ status: 'fail' });
           }
-        } else {
-          logger.error('invalid result received');
-          resolve([]);
-        }
+        });
       });
-    });
+
+    // Retry transient C-FIND failures before giving up. The data is always
+    // present locally, so a short retry almost always succeeds and a transient
+    // association rejection never surfaces as an empty study list. Only fall
+    // back to [] once every attempt is exhausted.
+    for (let i = 1; i <= QIDO_MAX_ATTEMPTS; i += 1) {
+      // eslint-disable-next-line no-await-in-loop
+      const res = await attempt();
+      if (res.status === 'ok') {
+        return res.data;
+      }
+      if (i < QIDO_MAX_ATTEMPTS) {
+        logger.info(`c-find attempt ${i}/${QIDO_MAX_ATTEMPTS} failed, retrying...`);
+        // eslint-disable-next-line no-await-in-loop
+        await new Promise((r) => {
+          setTimeout(r, QIDO_RETRY_DELAY_MS);
+        });
+      }
+    }
+    logger.error(`c-find exhausted ${QIDO_MAX_ATTEMPTS} attempts, returning empty result`);
+    return [];
   },
 };
 module.exports = utils;
