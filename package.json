@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node src/app.js",
-    "import": "node src/storescu.js"
+    "import": "node src/import.js",
+    "test": "node --test test/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -53,7 +54,6 @@
     "dicom-dimse-native": "2.4.6",
     "dicom-parser": "^1.8.21",
     "fastify": "^4.26.0",
-    "fs-walk": "^0.0.2",
     "shelljs": "^0.8.5",
     "simple-node-logger": "^21.8.12"
   },

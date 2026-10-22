@@ -38,11 +38,14 @@ No need for a server, try the [standalone desktop edition](https://github.com/kn
 * run:  
   ```npm start```
 
-* import DICOM images: use any c-store-scu to push to internal store-scp  
-  ```(AET: DICOMWEB_PACS   port: 8888)```
+* import DICOM images: put DICOM files into the import directory and run  
+  ```npm run import``` (or ```npm run import -- <folder>```)  
+  Files are copied to the storage path as `<StudyInstanceUID>/<SOPInstanceUID>`;
+  the server does not need to be running and picks new studies up on the next query.
+  There is no DIMSE (C-STORE/C-FIND) server: QIDO is answered from an index of the storage folder.
 
-* (or use internal store-scu): put DICOM into import directory and run  
-  ```npm run import``` (server needs to be running)
+* run the tests  
+  ```npm test```
 
 * open webbrowser and start viewing  
   ```http://localhost:5001```
