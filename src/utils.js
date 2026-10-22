@@ -4,7 +4,6 @@ const dimse = require('dicom-dimse-native');
 const dict2 = require('@iwharris/dicom-data-dictionary');
 const fs = require('fs');
 const path = require('path');
-const shell = require('shelljs');
 const manager = require('simple-node-logger').createLogManager();
 const { createIndex } = require('./dicomIndex');
 
@@ -20,8 +19,8 @@ function withFileLock(key, fn) {
 
 // make sure default directories exist
 const logDir = config.get('logDir');
-shell.mkdir('-p', logDir);
-shell.mkdir('-p', config.get('storagePath'));
+fs.mkdirSync(logDir, { recursive: true });
+fs.mkdirSync(config.get('storagePath'), { recursive: true });
 
 // create a rolling file logger based on date/time that fires process events
 const opts = {
@@ -64,6 +63,8 @@ const findVR = (name) => {
 //------------------------------------------------------------------
 
 const utils = {
+  findDicomName,
+  findVR,
   getLogger: () => logger,
   fileExists: (pathname) =>
     new Promise((resolve, reject) => {
@@ -133,7 +134,7 @@ const utils = {
         // not cached yet, proceed with recompression
       }
 
-      shell.mkdir('-p', cacheDir);
+      fs.mkdirSync(cacheDir, { recursive: true });
 
       return new Promise((resolve, reject) => {
         const j = {

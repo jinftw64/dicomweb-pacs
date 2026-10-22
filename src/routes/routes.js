@@ -5,9 +5,21 @@ const crypto = require('crypto');
 const { Readable } = require('stream');
 const config = require('config');
 const utils = require('../utils');
-const { isUid } = require('../dicomIndex');
 
 const logger = utils.getLogger();
+
+function isValidUid(uid) {
+  return typeof uid === 'string' && uid.length > 0 && uid.length <= 64 && /^[\d.]+$/.test(uid);
+}
+
+function safePath(storagePath, ...segments) {
+  const resolved = path.resolve(path.join(storagePath, ...segments));
+  const resolvedStorage = path.resolve(storagePath);
+  if (!resolved.startsWith(resolvedStorage + path.sep) && resolved !== resolvedStorage) {
+    return null;
+  }
+  return resolved;
+}
 
 function applyDefault(json, tag, vr, defaultValue) {
   const rsp = json;
@@ -42,7 +54,7 @@ function fixResponse(json) {
   return rspArray;
 }
 
-module.exports = function routes(server, opts, done) {
+function routes(server, opts, done) {
   //------------------------------------------------------------------
 
   server.get('/rs/studies', async (req, reply) => {
@@ -124,14 +136,19 @@ module.exports = function routes(server, opts, done) {
 
   server.get('/rs/studies/:studyInstanceUid/series/:seriesInstanceUid/instances/:sopInstanceUid/frames/:frame', async (req, reply) => {
     const { studyInstanceUid, seriesInstanceUid, sopInstanceUid } = req.params;
-    if (![studyInstanceUid, seriesInstanceUid, sopInstanceUid].every(isUid)) {
+
+    if (!isValidUid(studyInstanceUid) || !isValidUid(seriesInstanceUid) || !isValidUid(sopInstanceUid)) {
       reply.code(400);
-      return 'invalid UID';
+      return 'Invalid UID format';
     }
 
     const storagePath = config.get('storagePath');
-    const studyPath = path.join(storagePath, studyInstanceUid);
-    const pathname = path.join(studyPath, sopInstanceUid);
+    const pathname = safePath(storagePath, studyInstanceUid, sopInstanceUid);
+    if (!pathname) {
+      reply.code(400);
+      return 'Invalid path';
+    }
+    const studyPath = path.dirname(pathname);
 
     let contentLocation = `/studies/${studyInstanceUid}`;
     if (seriesInstanceUid) {
@@ -147,7 +164,7 @@ module.exports = function routes(server, opts, done) {
     } catch (error) {
       logger.error(error);
       reply.code(404);
-      return `File ${pathname} not found!`;
+      return 'File not found';
     }
 
     let cachedPath;
@@ -156,7 +173,7 @@ module.exports = function routes(server, opts, done) {
     } catch (error) {
       logger.error(error);
       reply.code(500);
-      return `failed to compress ${pathname}`;
+      return 'Failed to process file';
     }
 
     // read file from cache
@@ -187,7 +204,7 @@ module.exports = function routes(server, opts, done) {
     } catch (error) {
       logger.error(error);
       reply.code(500);
-      return `Error getting the file: ${error}.`;
+      return 'Error reading file';
     }
   });
 
@@ -200,24 +217,29 @@ module.exports = function routes(server, opts, done) {
     if (!studyUid || !seriesUid || !imageUid) {
       const msg = `Error missing parameters.`;
       logger.error(msg);
-      reply.code(500);
+      reply.code(400);
       return msg;
     }
-    if (![studyUid, seriesUid, imageUid].every(isUid)) {
+
+    if (!isValidUid(studyUid) || !isValidUid(seriesUid) || !isValidUid(imageUid)) {
       reply.code(400);
-      return 'invalid UID';
+      return 'Invalid UID format';
     }
+
     const storagePath = config.get('storagePath');
-    const studyPath = path.join(storagePath, studyUid);
-    const pathname = path.join(studyPath, imageUid);
+    const pathname = safePath(storagePath, studyUid, imageUid);
+    if (!pathname) {
+      reply.code(400);
+      return 'Invalid path';
+    }
+    const studyPath = path.dirname(pathname);
 
     try {
       await utils.fileExists(pathname);
     } catch (error) {
       logger.error(error);
-      const msg = `file not found ${pathname}`;
-      reply.code(500);
-      return msg;
+      reply.code(404);
+      return 'File not found';
     }
 
     let cachedPath;
@@ -225,9 +247,8 @@ module.exports = function routes(server, opts, done) {
       cachedPath = await utils.compressFile(pathname, studyPath);
     } catch (error) {
       logger.error(error);
-      const msg = `failed to compress ${pathname}`;
       reply.code(500);
-      return msg;
+      return 'Failed to process file';
     }
 
     // read file from cache
@@ -236,11 +257,16 @@ module.exports = function routes(server, opts, done) {
       reply.header('Content-Type', 'application/dicom+json');
       return data;
     } catch (error) {
-      const msg = `Error getting the file: ${error}.`;
-      logger.error(msg);
-      reply.setCode(500);
-      return msg;
+      logger.error(error);
+      reply.code(500);
+      return 'Error reading file';
     }
   });
   done();
-};
+}
+
+module.exports = routes;
+module.exports.applyDefault = applyDefault;
+module.exports.sortByInstanceNumber = sortByInstanceNumber;
+module.exports.fixResponse = fixResponse;
+module.exports.isValidUid = isValidUid;
