@@ -5,6 +5,7 @@ const crypto = require('crypto');
 const { Readable } = require('stream');
 const config = require('config');
 const utils = require('../utils');
+const { isUid } = require('../dicomIndex');
 
 const logger = utils.getLogger();
 
@@ -123,6 +124,10 @@ module.exports = function routes(server, opts, done) {
 
   server.get('/rs/studies/:studyInstanceUid/series/:seriesInstanceUid/instances/:sopInstanceUid/frames/:frame', async (req, reply) => {
     const { studyInstanceUid, seriesInstanceUid, sopInstanceUid } = req.params;
+    if (![studyInstanceUid, seriesInstanceUid, sopInstanceUid].every(isUid)) {
+      reply.code(400);
+      return 'invalid UID';
+    }
 
     const storagePath = config.get('storagePath');
     const studyPath = path.join(storagePath, studyInstanceUid);
@@ -197,6 +202,10 @@ module.exports = function routes(server, opts, done) {
       logger.error(msg);
       reply.code(500);
       return msg;
+    }
+    if (![studyUid, seriesUid, imageUid].every(isUid)) {
+      reply.code(400);
+      return 'invalid UID';
     }
     const storagePath = config.get('storagePath');
     const studyPath = path.join(storagePath, studyUid);
