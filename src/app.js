@@ -56,8 +56,6 @@ closeWithGrace({ delay: 500 }, async ({ signal, err, manual }) => {
   logger.info('shutting down...', signal, manual);
   try {
     await server.close();
-    await utils.shutdown();
-    server.close();
   } catch (error) {
     logger.error(error);
   }
@@ -72,8 +70,6 @@ logger.info('starting...');
   try {
     await server.listen({ port, host: '0.0.0.0' });
     logger.info(`web-server listening on port: ${port}`);
-    utils.startScp();
-    utils.sendEcho();
   } catch (err) {
     logger.error(err);
     process.exit(1);

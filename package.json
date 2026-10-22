@@ -1,12 +1,12 @@
 {
   "name": "dicomweb-pacs",
   "version": "1.7.0",
-  "description": "A self contained easy to use PACS with DICOMWEB and DIMSE service support",
+  "description": "A self contained easy to use PACS with DICOMWEB support",
   "main": "app.js",
   "scripts": {
     "start": "node src/app.js",
-    "import": "node src/storescu.js",
-    "test": "vitest run",
+    "import": "node src/import.js",
+    "test": "vitest run && node --test test/*.test.js",
     "test:watch": "vitest"
   },
   "repository": {
@@ -55,7 +55,6 @@
     "dicom-dimse-native": "2.4.6",
     "dicom-parser": "^1.8.21",
     "fastify": "^5.7.4",
-    "fs-walk": "^0.0.2",
     "simple-node-logger": "^21.8.12"
   },
   "devDependencies": {

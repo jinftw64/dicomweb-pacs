@@ -31,6 +31,6 @@ RUN mkdir -p /app/data /app/logs /app/import \
 
 USER appuser
 
-EXPOSE 5001 8888
+EXPOSE 5001
 
 CMD ["node", "src/app.js"]

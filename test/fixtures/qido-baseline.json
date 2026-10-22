@@ -1,0 +1,8256 @@
+[
+  {
+    "url": "/rs/studies",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "STUDY"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies?limit=101&offset=0&fuzzymatching=false&includefield=00081030%2C00080060",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "STUDY"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00081030": {
+          "Value": [
+            "Luminance 1K"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies?limit=25&offset=0&fuzzymatching=false&includefield=00081030%2C00080060&PatientName=AAPM",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "STUDY"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00081030": {
+          "Value": [
+            "Luminance 1K"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies?PatientName=AAPM",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "STUDY"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies?PatientName=aapm",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "STUDY"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies?PatientName=*Test*",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": []
+  },
+  {
+    "url": "/rs/studies?PatientName=ZZZ",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": []
+  },
+  {
+    "url": "/rs/studies?PatientName=Test",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": []
+  },
+  {
+    "url": "/rs/studies?PatientID=TG18-2002",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "STUDY"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies?PatientID=TG18",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "STUDY"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies?PatientID=nope",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": []
+  },
+  {
+    "url": "/rs/studies?StudyDate=20201117",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "STUDY"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies?StudyDate=20201118",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": []
+  },
+  {
+    "url": "/rs/studies?StudyDate=20200101-20211231",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "STUDY"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies?StudyDate=20210101-20211231",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": []
+  },
+  {
+    "url": "/rs/studies?AccessionNumber=20022002",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "STUDY"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies?AccessionNumber=2002",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "STUDY"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies?ModalitiesInStudy=OT",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "STUDY"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies?ModalitiesInStudy=CT",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": []
+  },
+  {
+    "url": "/rs/studies?StudyDescription=TG18",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": []
+  },
+  {
+    "url": "/rs/studies?includefield=StudyDescription",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "STUDY"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00081030": {
+          "Value": [
+            "Luminance 1K"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies?includefield=00081030",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "STUDY"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00081030": {
+          "Value": [
+            "Luminance 1K"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies?StudyInstanceUID=2.16.124.113543.6004.101.103.20021117.162333.1",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "STUDY"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies?StudyInstanceUID=1.2.3",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": []
+  },
+  {
+    "url": "/rs/studies?offset=1",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": []
+  },
+  {
+    "url": "/rs/studies?unknownparam=1",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "STUDY"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies/2.16.124.113543.6004.101.103.20021117.162333.1/series",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080052": {
+          "Value": [
+            "SERIES"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies/2.16.124.113543.6004.101.103.20021117.162333.1/series?includefield=00080021",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080021": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080052": {
+          "Value": [
+            "SERIES"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies/2.16.124.113543.6004.101.103.20021117.162333.1/series?Modality=OT",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080052": {
+          "Value": [
+            "SERIES"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies/2.16.124.113543.6004.101.103.20021117.162333.1/series?Modality=CT",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": []
+  },
+  {
+    "url": "/rs/studies/1.2.3/series",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": []
+  },
+  {
+    "url": "/rs/studies/2.16.124.113543.6004.101.103.20021117.162333.1/metadata",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "SERIES"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies/1.2.3/metadata",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": []
+  },
+  {
+    "url": "/rs/studies/2.16.124.113543.6004.101.103.20021117.162333.1/series/2.16.124.113543.6004.101.103.20021117.162333.1.002/instances",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.001"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.002"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.003"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            3
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.004"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            4
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.005"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            5
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.006"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            6
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.007"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            7
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.008"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            8
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.009"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            9
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.010"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            10
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.011"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            11
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.012"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            12
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.013"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            13
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.014"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            14
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.015"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            15
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.016"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            16
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.017"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            17
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.018"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            18
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.019"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            19
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.020"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies/2.16.124.113543.6004.101.103.20021117.162333.1/series/2.16.124.113543.6004.101.103.20021117.162333.1.002/instances?offset=5",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.001"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.002"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.003"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            3
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.004"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            4
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.005"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            5
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.007"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            7
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.008"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            8
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.010"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            10
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.011"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            11
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.013"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            13
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.015"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            15
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.016"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            16
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.017"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            17
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.018"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            18
+          ],
+          "vr": "IS"
+        }
+      },
+      {
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.020"
+          ],
+          "vr": "UI"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200013": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies/2.16.124.113543.6004.101.103.20021117.162333.1/series/1.2.3/instances",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": []
+  },
+  {
+    "url": "/rs/studies/2.16.124.113543.6004.101.103.20021117.162333.1/series/2.16.124.113543.6004.101.103.20021117.162333.1.002/metadata",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.001"
+          ],
+          "vr": "UI"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200013": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00200032": {
+          "vr": "DS"
+        },
+        "00200037": {
+          "vr": "DS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00280002": {
+          "Value": [
+            1
+          ],
+          "vr": "US"
+        },
+        "00280004": {
+          "Value": [
+            "MONOCHROME2"
+          ],
+          "vr": "CS"
+        },
+        "00280010": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280011": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280030": {
+          "vr": "DS"
+        },
+        "00280100": {
+          "Value": [
+            16
+          ],
+          "vr": "US"
+        },
+        "00280101": {
+          "Value": [
+            12
+          ],
+          "vr": "US"
+        },
+        "00280102": {
+          "Value": [
+            11
+          ],
+          "vr": "US"
+        },
+        "00280103": {
+          "vr": "US"
+        },
+        "00281050": {
+          "Value": [
+            2040
+          ],
+          "vr": "DS"
+        },
+        "00281051": {
+          "Value": [
+            4080
+          ],
+          "vr": "DS"
+        },
+        "00281052": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        },
+        "00281053": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        }
+      },
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.002"
+          ],
+          "vr": "UI"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200013": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200032": {
+          "vr": "DS"
+        },
+        "00200037": {
+          "vr": "DS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00280002": {
+          "Value": [
+            1
+          ],
+          "vr": "US"
+        },
+        "00280004": {
+          "Value": [
+            "MONOCHROME2"
+          ],
+          "vr": "CS"
+        },
+        "00280010": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280011": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280030": {
+          "vr": "DS"
+        },
+        "00280100": {
+          "Value": [
+            16
+          ],
+          "vr": "US"
+        },
+        "00280101": {
+          "Value": [
+            12
+          ],
+          "vr": "US"
+        },
+        "00280102": {
+          "Value": [
+            11
+          ],
+          "vr": "US"
+        },
+        "00280103": {
+          "vr": "US"
+        },
+        "00281050": {
+          "Value": [
+            2040
+          ],
+          "vr": "DS"
+        },
+        "00281051": {
+          "Value": [
+            4080
+          ],
+          "vr": "DS"
+        },
+        "00281052": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        },
+        "00281053": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        }
+      },
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.003"
+          ],
+          "vr": "UI"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200013": {
+          "Value": [
+            3
+          ],
+          "vr": "IS"
+        },
+        "00200032": {
+          "vr": "DS"
+        },
+        "00200037": {
+          "vr": "DS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00280002": {
+          "Value": [
+            1
+          ],
+          "vr": "US"
+        },
+        "00280004": {
+          "Value": [
+            "MONOCHROME2"
+          ],
+          "vr": "CS"
+        },
+        "00280010": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280011": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280030": {
+          "vr": "DS"
+        },
+        "00280100": {
+          "Value": [
+            16
+          ],
+          "vr": "US"
+        },
+        "00280101": {
+          "Value": [
+            12
+          ],
+          "vr": "US"
+        },
+        "00280102": {
+          "Value": [
+            11
+          ],
+          "vr": "US"
+        },
+        "00280103": {
+          "vr": "US"
+        },
+        "00281050": {
+          "Value": [
+            2040
+          ],
+          "vr": "DS"
+        },
+        "00281051": {
+          "Value": [
+            4080
+          ],
+          "vr": "DS"
+        },
+        "00281052": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        },
+        "00281053": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        }
+      },
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.004"
+          ],
+          "vr": "UI"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200013": {
+          "Value": [
+            4
+          ],
+          "vr": "IS"
+        },
+        "00200032": {
+          "vr": "DS"
+        },
+        "00200037": {
+          "vr": "DS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00280002": {
+          "Value": [
+            1
+          ],
+          "vr": "US"
+        },
+        "00280004": {
+          "Value": [
+            "MONOCHROME2"
+          ],
+          "vr": "CS"
+        },
+        "00280010": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280011": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280030": {
+          "vr": "DS"
+        },
+        "00280100": {
+          "Value": [
+            16
+          ],
+          "vr": "US"
+        },
+        "00280101": {
+          "Value": [
+            12
+          ],
+          "vr": "US"
+        },
+        "00280102": {
+          "Value": [
+            11
+          ],
+          "vr": "US"
+        },
+        "00280103": {
+          "vr": "US"
+        },
+        "00281050": {
+          "Value": [
+            2040
+          ],
+          "vr": "DS"
+        },
+        "00281051": {
+          "Value": [
+            4080
+          ],
+          "vr": "DS"
+        },
+        "00281052": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        },
+        "00281053": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        }
+      },
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.005"
+          ],
+          "vr": "UI"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200013": {
+          "Value": [
+            5
+          ],
+          "vr": "IS"
+        },
+        "00200032": {
+          "vr": "DS"
+        },
+        "00200037": {
+          "vr": "DS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00280002": {
+          "Value": [
+            1
+          ],
+          "vr": "US"
+        },
+        "00280004": {
+          "Value": [
+            "MONOCHROME2"
+          ],
+          "vr": "CS"
+        },
+        "00280010": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280011": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280030": {
+          "vr": "DS"
+        },
+        "00280100": {
+          "Value": [
+            16
+          ],
+          "vr": "US"
+        },
+        "00280101": {
+          "Value": [
+            12
+          ],
+          "vr": "US"
+        },
+        "00280102": {
+          "Value": [
+            11
+          ],
+          "vr": "US"
+        },
+        "00280103": {
+          "vr": "US"
+        },
+        "00281050": {
+          "Value": [
+            2040
+          ],
+          "vr": "DS"
+        },
+        "00281051": {
+          "Value": [
+            4080
+          ],
+          "vr": "DS"
+        },
+        "00281052": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        },
+        "00281053": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        }
+      },
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.006"
+          ],
+          "vr": "UI"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200013": {
+          "Value": [
+            6
+          ],
+          "vr": "IS"
+        },
+        "00200032": {
+          "vr": "DS"
+        },
+        "00200037": {
+          "vr": "DS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00280002": {
+          "Value": [
+            1
+          ],
+          "vr": "US"
+        },
+        "00280004": {
+          "Value": [
+            "MONOCHROME2"
+          ],
+          "vr": "CS"
+        },
+        "00280010": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280011": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280030": {
+          "vr": "DS"
+        },
+        "00280100": {
+          "Value": [
+            16
+          ],
+          "vr": "US"
+        },
+        "00280101": {
+          "Value": [
+            12
+          ],
+          "vr": "US"
+        },
+        "00280102": {
+          "Value": [
+            11
+          ],
+          "vr": "US"
+        },
+        "00280103": {
+          "vr": "US"
+        },
+        "00281050": {
+          "Value": [
+            2040
+          ],
+          "vr": "DS"
+        },
+        "00281051": {
+          "Value": [
+            4080
+          ],
+          "vr": "DS"
+        },
+        "00281052": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        },
+        "00281053": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        }
+      },
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.007"
+          ],
+          "vr": "UI"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200013": {
+          "Value": [
+            7
+          ],
+          "vr": "IS"
+        },
+        "00200032": {
+          "vr": "DS"
+        },
+        "00200037": {
+          "vr": "DS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00280002": {
+          "Value": [
+            1
+          ],
+          "vr": "US"
+        },
+        "00280004": {
+          "Value": [
+            "MONOCHROME2"
+          ],
+          "vr": "CS"
+        },
+        "00280010": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280011": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280030": {
+          "vr": "DS"
+        },
+        "00280100": {
+          "Value": [
+            16
+          ],
+          "vr": "US"
+        },
+        "00280101": {
+          "Value": [
+            12
+          ],
+          "vr": "US"
+        },
+        "00280102": {
+          "Value": [
+            11
+          ],
+          "vr": "US"
+        },
+        "00280103": {
+          "vr": "US"
+        },
+        "00281050": {
+          "Value": [
+            2040
+          ],
+          "vr": "DS"
+        },
+        "00281051": {
+          "Value": [
+            4080
+          ],
+          "vr": "DS"
+        },
+        "00281052": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        },
+        "00281053": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        }
+      },
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.008"
+          ],
+          "vr": "UI"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200013": {
+          "Value": [
+            8
+          ],
+          "vr": "IS"
+        },
+        "00200032": {
+          "vr": "DS"
+        },
+        "00200037": {
+          "vr": "DS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00280002": {
+          "Value": [
+            1
+          ],
+          "vr": "US"
+        },
+        "00280004": {
+          "Value": [
+            "MONOCHROME2"
+          ],
+          "vr": "CS"
+        },
+        "00280010": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280011": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280030": {
+          "vr": "DS"
+        },
+        "00280100": {
+          "Value": [
+            16
+          ],
+          "vr": "US"
+        },
+        "00280101": {
+          "Value": [
+            12
+          ],
+          "vr": "US"
+        },
+        "00280102": {
+          "Value": [
+            11
+          ],
+          "vr": "US"
+        },
+        "00280103": {
+          "vr": "US"
+        },
+        "00281050": {
+          "Value": [
+            2040
+          ],
+          "vr": "DS"
+        },
+        "00281051": {
+          "Value": [
+            4080
+          ],
+          "vr": "DS"
+        },
+        "00281052": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        },
+        "00281053": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        }
+      },
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.009"
+          ],
+          "vr": "UI"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200013": {
+          "Value": [
+            9
+          ],
+          "vr": "IS"
+        },
+        "00200032": {
+          "vr": "DS"
+        },
+        "00200037": {
+          "vr": "DS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00280002": {
+          "Value": [
+            1
+          ],
+          "vr": "US"
+        },
+        "00280004": {
+          "Value": [
+            "MONOCHROME2"
+          ],
+          "vr": "CS"
+        },
+        "00280010": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280011": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280030": {
+          "vr": "DS"
+        },
+        "00280100": {
+          "Value": [
+            16
+          ],
+          "vr": "US"
+        },
+        "00280101": {
+          "Value": [
+            12
+          ],
+          "vr": "US"
+        },
+        "00280102": {
+          "Value": [
+            11
+          ],
+          "vr": "US"
+        },
+        "00280103": {
+          "vr": "US"
+        },
+        "00281050": {
+          "Value": [
+            2040
+          ],
+          "vr": "DS"
+        },
+        "00281051": {
+          "Value": [
+            4080
+          ],
+          "vr": "DS"
+        },
+        "00281052": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        },
+        "00281053": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        }
+      },
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.010"
+          ],
+          "vr": "UI"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200013": {
+          "Value": [
+            10
+          ],
+          "vr": "IS"
+        },
+        "00200032": {
+          "vr": "DS"
+        },
+        "00200037": {
+          "vr": "DS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00280002": {
+          "Value": [
+            1
+          ],
+          "vr": "US"
+        },
+        "00280004": {
+          "Value": [
+            "MONOCHROME2"
+          ],
+          "vr": "CS"
+        },
+        "00280010": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280011": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280030": {
+          "vr": "DS"
+        },
+        "00280100": {
+          "Value": [
+            16
+          ],
+          "vr": "US"
+        },
+        "00280101": {
+          "Value": [
+            12
+          ],
+          "vr": "US"
+        },
+        "00280102": {
+          "Value": [
+            11
+          ],
+          "vr": "US"
+        },
+        "00280103": {
+          "vr": "US"
+        },
+        "00281050": {
+          "Value": [
+            2040
+          ],
+          "vr": "DS"
+        },
+        "00281051": {
+          "Value": [
+            4080
+          ],
+          "vr": "DS"
+        },
+        "00281052": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        },
+        "00281053": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        }
+      },
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.011"
+          ],
+          "vr": "UI"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200013": {
+          "Value": [
+            11
+          ],
+          "vr": "IS"
+        },
+        "00200032": {
+          "vr": "DS"
+        },
+        "00200037": {
+          "vr": "DS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00280002": {
+          "Value": [
+            1
+          ],
+          "vr": "US"
+        },
+        "00280004": {
+          "Value": [
+            "MONOCHROME2"
+          ],
+          "vr": "CS"
+        },
+        "00280010": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280011": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280030": {
+          "vr": "DS"
+        },
+        "00280100": {
+          "Value": [
+            16
+          ],
+          "vr": "US"
+        },
+        "00280101": {
+          "Value": [
+            12
+          ],
+          "vr": "US"
+        },
+        "00280102": {
+          "Value": [
+            11
+          ],
+          "vr": "US"
+        },
+        "00280103": {
+          "vr": "US"
+        },
+        "00281050": {
+          "Value": [
+            2040
+          ],
+          "vr": "DS"
+        },
+        "00281051": {
+          "Value": [
+            4080
+          ],
+          "vr": "DS"
+        },
+        "00281052": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        },
+        "00281053": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        }
+      },
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.012"
+          ],
+          "vr": "UI"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200013": {
+          "Value": [
+            12
+          ],
+          "vr": "IS"
+        },
+        "00200032": {
+          "vr": "DS"
+        },
+        "00200037": {
+          "vr": "DS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00280002": {
+          "Value": [
+            1
+          ],
+          "vr": "US"
+        },
+        "00280004": {
+          "Value": [
+            "MONOCHROME2"
+          ],
+          "vr": "CS"
+        },
+        "00280010": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280011": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280030": {
+          "vr": "DS"
+        },
+        "00280100": {
+          "Value": [
+            16
+          ],
+          "vr": "US"
+        },
+        "00280101": {
+          "Value": [
+            12
+          ],
+          "vr": "US"
+        },
+        "00280102": {
+          "Value": [
+            11
+          ],
+          "vr": "US"
+        },
+        "00280103": {
+          "vr": "US"
+        },
+        "00281050": {
+          "Value": [
+            2040
+          ],
+          "vr": "DS"
+        },
+        "00281051": {
+          "Value": [
+            4080
+          ],
+          "vr": "DS"
+        },
+        "00281052": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        },
+        "00281053": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        }
+      },
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.013"
+          ],
+          "vr": "UI"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200013": {
+          "Value": [
+            13
+          ],
+          "vr": "IS"
+        },
+        "00200032": {
+          "vr": "DS"
+        },
+        "00200037": {
+          "vr": "DS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00280002": {
+          "Value": [
+            1
+          ],
+          "vr": "US"
+        },
+        "00280004": {
+          "Value": [
+            "MONOCHROME2"
+          ],
+          "vr": "CS"
+        },
+        "00280010": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280011": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280030": {
+          "vr": "DS"
+        },
+        "00280100": {
+          "Value": [
+            16
+          ],
+          "vr": "US"
+        },
+        "00280101": {
+          "Value": [
+            12
+          ],
+          "vr": "US"
+        },
+        "00280102": {
+          "Value": [
+            11
+          ],
+          "vr": "US"
+        },
+        "00280103": {
+          "vr": "US"
+        },
+        "00281050": {
+          "Value": [
+            2040
+          ],
+          "vr": "DS"
+        },
+        "00281051": {
+          "Value": [
+            4080
+          ],
+          "vr": "DS"
+        },
+        "00281052": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        },
+        "00281053": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        }
+      },
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.014"
+          ],
+          "vr": "UI"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200013": {
+          "Value": [
+            14
+          ],
+          "vr": "IS"
+        },
+        "00200032": {
+          "vr": "DS"
+        },
+        "00200037": {
+          "vr": "DS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00280002": {
+          "Value": [
+            1
+          ],
+          "vr": "US"
+        },
+        "00280004": {
+          "Value": [
+            "MONOCHROME2"
+          ],
+          "vr": "CS"
+        },
+        "00280010": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280011": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280030": {
+          "vr": "DS"
+        },
+        "00280100": {
+          "Value": [
+            16
+          ],
+          "vr": "US"
+        },
+        "00280101": {
+          "Value": [
+            12
+          ],
+          "vr": "US"
+        },
+        "00280102": {
+          "Value": [
+            11
+          ],
+          "vr": "US"
+        },
+        "00280103": {
+          "vr": "US"
+        },
+        "00281050": {
+          "Value": [
+            2040
+          ],
+          "vr": "DS"
+        },
+        "00281051": {
+          "Value": [
+            4080
+          ],
+          "vr": "DS"
+        },
+        "00281052": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        },
+        "00281053": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        }
+      },
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.015"
+          ],
+          "vr": "UI"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200013": {
+          "Value": [
+            15
+          ],
+          "vr": "IS"
+        },
+        "00200032": {
+          "vr": "DS"
+        },
+        "00200037": {
+          "vr": "DS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00280002": {
+          "Value": [
+            1
+          ],
+          "vr": "US"
+        },
+        "00280004": {
+          "Value": [
+            "MONOCHROME2"
+          ],
+          "vr": "CS"
+        },
+        "00280010": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280011": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280030": {
+          "vr": "DS"
+        },
+        "00280100": {
+          "Value": [
+            16
+          ],
+          "vr": "US"
+        },
+        "00280101": {
+          "Value": [
+            12
+          ],
+          "vr": "US"
+        },
+        "00280102": {
+          "Value": [
+            11
+          ],
+          "vr": "US"
+        },
+        "00280103": {
+          "vr": "US"
+        },
+        "00281050": {
+          "Value": [
+            2040
+          ],
+          "vr": "DS"
+        },
+        "00281051": {
+          "Value": [
+            4080
+          ],
+          "vr": "DS"
+        },
+        "00281052": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        },
+        "00281053": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        }
+      },
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.016"
+          ],
+          "vr": "UI"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200013": {
+          "Value": [
+            16
+          ],
+          "vr": "IS"
+        },
+        "00200032": {
+          "vr": "DS"
+        },
+        "00200037": {
+          "vr": "DS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00280002": {
+          "Value": [
+            1
+          ],
+          "vr": "US"
+        },
+        "00280004": {
+          "Value": [
+            "MONOCHROME2"
+          ],
+          "vr": "CS"
+        },
+        "00280010": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280011": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280030": {
+          "vr": "DS"
+        },
+        "00280100": {
+          "Value": [
+            16
+          ],
+          "vr": "US"
+        },
+        "00280101": {
+          "Value": [
+            12
+          ],
+          "vr": "US"
+        },
+        "00280102": {
+          "Value": [
+            11
+          ],
+          "vr": "US"
+        },
+        "00280103": {
+          "vr": "US"
+        },
+        "00281050": {
+          "Value": [
+            2040
+          ],
+          "vr": "DS"
+        },
+        "00281051": {
+          "Value": [
+            4080
+          ],
+          "vr": "DS"
+        },
+        "00281052": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        },
+        "00281053": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        }
+      },
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.017"
+          ],
+          "vr": "UI"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200013": {
+          "Value": [
+            17
+          ],
+          "vr": "IS"
+        },
+        "00200032": {
+          "vr": "DS"
+        },
+        "00200037": {
+          "vr": "DS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00280002": {
+          "Value": [
+            1
+          ],
+          "vr": "US"
+        },
+        "00280004": {
+          "Value": [
+            "MONOCHROME2"
+          ],
+          "vr": "CS"
+        },
+        "00280010": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280011": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280030": {
+          "vr": "DS"
+        },
+        "00280100": {
+          "Value": [
+            16
+          ],
+          "vr": "US"
+        },
+        "00280101": {
+          "Value": [
+            12
+          ],
+          "vr": "US"
+        },
+        "00280102": {
+          "Value": [
+            11
+          ],
+          "vr": "US"
+        },
+        "00280103": {
+          "vr": "US"
+        },
+        "00281050": {
+          "Value": [
+            2040
+          ],
+          "vr": "DS"
+        },
+        "00281051": {
+          "Value": [
+            4080
+          ],
+          "vr": "DS"
+        },
+        "00281052": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        },
+        "00281053": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        }
+      },
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.018"
+          ],
+          "vr": "UI"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200013": {
+          "Value": [
+            18
+          ],
+          "vr": "IS"
+        },
+        "00200032": {
+          "vr": "DS"
+        },
+        "00200037": {
+          "vr": "DS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00280002": {
+          "Value": [
+            1
+          ],
+          "vr": "US"
+        },
+        "00280004": {
+          "Value": [
+            "MONOCHROME2"
+          ],
+          "vr": "CS"
+        },
+        "00280010": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280011": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280030": {
+          "vr": "DS"
+        },
+        "00280100": {
+          "Value": [
+            16
+          ],
+          "vr": "US"
+        },
+        "00280101": {
+          "Value": [
+            12
+          ],
+          "vr": "US"
+        },
+        "00280102": {
+          "Value": [
+            11
+          ],
+          "vr": "US"
+        },
+        "00280103": {
+          "vr": "US"
+        },
+        "00281050": {
+          "Value": [
+            2040
+          ],
+          "vr": "DS"
+        },
+        "00281051": {
+          "Value": [
+            4080
+          ],
+          "vr": "DS"
+        },
+        "00281052": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        },
+        "00281053": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        }
+      },
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.019"
+          ],
+          "vr": "UI"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200013": {
+          "Value": [
+            19
+          ],
+          "vr": "IS"
+        },
+        "00200032": {
+          "vr": "DS"
+        },
+        "00200037": {
+          "vr": "DS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00280002": {
+          "Value": [
+            1
+          ],
+          "vr": "US"
+        },
+        "00280004": {
+          "Value": [
+            "MONOCHROME2"
+          ],
+          "vr": "CS"
+        },
+        "00280010": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280011": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280030": {
+          "vr": "DS"
+        },
+        "00280100": {
+          "Value": [
+            16
+          ],
+          "vr": "US"
+        },
+        "00280101": {
+          "Value": [
+            12
+          ],
+          "vr": "US"
+        },
+        "00280102": {
+          "Value": [
+            11
+          ],
+          "vr": "US"
+        },
+        "00280103": {
+          "vr": "US"
+        },
+        "00281050": {
+          "Value": [
+            2048
+          ],
+          "vr": "DS"
+        },
+        "00281051": {
+          "Value": [
+            4096
+          ],
+          "vr": "DS"
+        },
+        "00281052": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        },
+        "00281053": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        }
+      },
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.020"
+          ],
+          "vr": "UI"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200013": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00200032": {
+          "vr": "DS"
+        },
+        "00200037": {
+          "vr": "DS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00280002": {
+          "Value": [
+            1
+          ],
+          "vr": "US"
+        },
+        "00280004": {
+          "Value": [
+            "MONOCHROME2"
+          ],
+          "vr": "CS"
+        },
+        "00280010": {
+          "Value": [
+            2048
+          ],
+          "vr": "US"
+        },
+        "00280011": {
+          "Value": [
+            2048
+          ],
+          "vr": "US"
+        },
+        "00280030": {
+          "vr": "DS"
+        },
+        "00280100": {
+          "Value": [
+            16
+          ],
+          "vr": "US"
+        },
+        "00280101": {
+          "Value": [
+            12
+          ],
+          "vr": "US"
+        },
+        "00280102": {
+          "Value": [
+            11
+          ],
+          "vr": "US"
+        },
+        "00280103": {
+          "vr": "US"
+        },
+        "00281050": {
+          "Value": [
+            2048
+          ],
+          "vr": "DS"
+        },
+        "00281051": {
+          "Value": [
+            4096
+          ],
+          "vr": "DS"
+        },
+        "00281052": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        },
+        "00281053": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies/2.16.124.113543.6004.101.103.20021117.162333.1/series/2.16.124.113543.6004.101.103.20021117.162333.1.002/instances/2.16.124.113543.6004.101.103.20021117.162333.1.002.005/metadata",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": [
+      {
+        "00080005": {
+          "Value": [
+            "ISO_IR 192"
+          ],
+          "vr": "CS"
+        },
+        "00080016": {
+          "Value": [
+            "1.2.840.10008.5.1.4.1.1.7"
+          ],
+          "vr": "UI"
+        },
+        "00080018": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002.005"
+          ],
+          "vr": "UI"
+        },
+        "00080020": {
+          "Value": [
+            "20201117"
+          ],
+          "vr": "DA"
+        },
+        "00080030": {
+          "Value": [
+            "162333"
+          ],
+          "vr": "TM"
+        },
+        "00080050": {
+          "Value": [
+            "20022002"
+          ],
+          "vr": "SH"
+        },
+        "00080052": {
+          "Value": [
+            "IMAGE"
+          ],
+          "vr": "CS"
+        },
+        "00080054": {
+          "Value": [
+            "DICOMWEB_PACS"
+          ],
+          "vr": "AE"
+        },
+        "00080060": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080061": {
+          "Value": [
+            "OT"
+          ],
+          "vr": "CS"
+        },
+        "00080090": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM"
+            }
+          ],
+          "vr": "PN"
+        },
+        "0008103E": {
+          "Value": [
+            "TG18-LN"
+          ],
+          "vr": "LO"
+        },
+        "00100010": {
+          "Value": [
+            {
+              "Alphabetic": "AAPM^Test^Patterns"
+            }
+          ],
+          "vr": "PN"
+        },
+        "00100020": {
+          "Value": [
+            "TG18-2002"
+          ],
+          "vr": "LO"
+        },
+        "00100030": {
+          "Value": [
+            "20020704"
+          ],
+          "vr": "DA"
+        },
+        "00100040": {
+          "Value": [
+            "O"
+          ],
+          "vr": "CS"
+        },
+        "0020000D": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1"
+          ],
+          "vr": "UI"
+        },
+        "0020000E": {
+          "Value": [
+            "2.16.124.113543.6004.101.103.20021117.162333.1.002"
+          ],
+          "vr": "UI"
+        },
+        "00200010": {
+          "Value": [
+            "1K-LUMIN"
+          ],
+          "vr": "SH"
+        },
+        "00200011": {
+          "Value": [
+            2
+          ],
+          "vr": "IS"
+        },
+        "00200013": {
+          "Value": [
+            5
+          ],
+          "vr": "IS"
+        },
+        "00200032": {
+          "vr": "DS"
+        },
+        "00200037": {
+          "vr": "DS"
+        },
+        "00201206": {
+          "Value": [
+            1
+          ],
+          "vr": "IS"
+        },
+        "00201208": {
+          "vr": "IS"
+        },
+        "00201209": {
+          "Value": [
+            20
+          ],
+          "vr": "IS"
+        },
+        "00280002": {
+          "Value": [
+            1
+          ],
+          "vr": "US"
+        },
+        "00280004": {
+          "Value": [
+            "MONOCHROME2"
+          ],
+          "vr": "CS"
+        },
+        "00280010": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280011": {
+          "Value": [
+            1024
+          ],
+          "vr": "US"
+        },
+        "00280030": {
+          "vr": "DS"
+        },
+        "00280100": {
+          "Value": [
+            16
+          ],
+          "vr": "US"
+        },
+        "00280101": {
+          "Value": [
+            12
+          ],
+          "vr": "US"
+        },
+        "00280102": {
+          "Value": [
+            11
+          ],
+          "vr": "US"
+        },
+        "00280103": {
+          "vr": "US"
+        },
+        "00281050": {
+          "Value": [
+            2040
+          ],
+          "vr": "DS"
+        },
+        "00281051": {
+          "Value": [
+            4080
+          ],
+          "vr": "DS"
+        },
+        "00281052": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        },
+        "00281053": {
+          "Value": [
+            "1.0"
+          ],
+          "vr": "DS"
+        }
+      }
+    ]
+  },
+  {
+    "url": "/rs/studies/2.16.124.113543.6004.101.103.20021117.162333.1/series/2.16.124.113543.6004.101.103.20021117.162333.1.002/instances/1.2.3/metadata",
+    "status": 200,
+    "contentType": "application/dicom+json; charset=utf-8",
+    "body": []
+  },
+  {
+    "url": "/rs/studies/2.16.124.113543.6004.101.103.20021117.162333.1/series/2.16.124.113543.6004.101.103.20021117.162333.1.002/instances/2.16.124.113543.6004.101.103.20021117.162333.1.002.005/frames/1",
+    "status": 200,
+    "framePayloadSha256": "3a939826f7815090e77b612dd75ecad7d69279b3e3e1b05587c1ac5d11639fed",
+    "length": 2097469
+  },
+  {
+    "url": "/rs/studies/2.16.124.113543.6004.101.103.20021117.162333.1/series/2.16.124.113543.6004.101.103.20021117.162333.1.002/instances/2.16.124.113543.6004.101.103.20021117.162333.1.002.019/frames/1",
+    "status": 200,
+    "framePayloadSha256": "98e0797a871f7f014f0d4b7ca3021d3e683a3514e481f9928096bb0d5f3199e1",
+    "length": 2097469
+  },
+  {
+    "url": "/rs/studies/2.16.124.113543.6004.101.103.20021117.162333.1/series/2.16.124.113543.6004.101.103.20021117.162333.1.002/instances/1.2.3/frames/1",
+    "status": 404
+  },
+  {
+    "url": "/wadouri?requestType=WADO&studyUID=2.16.124.113543.6004.101.103.20021117.162333.1&seriesUID=2.16.124.113543.6004.101.103.20021117.162333.1.002&objectUID=2.16.124.113543.6004.101.103.20021117.162333.1.002.005&contentType=application%2Fdicom",
+    "status": 200,
+    "datasetSha256": "a0e2e7b3fd541e2f5e372449f1384d85368ab83992a00286abe3661e04cba7ae",
+    "length": 2098594
+  },
+  {
+    "url": "/wadouri?studyUID=2.16.124.113543.6004.101.103.20021117.162333.1&seriesUID=2.16.124.113543.6004.101.103.20021117.162333.1.002&objectUID=1.2.3",
+    "status": 404
+  },
+  {
+    "url": "/wadouri?studyUID=2.16.124.113543.6004.101.103.20021117.162333.1",
+    "status": 400
+  }
+]

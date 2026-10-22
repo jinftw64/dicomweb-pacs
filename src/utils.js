@@ -4,6 +4,8 @@ const dimse = require('dicom-dimse-native');
 const dict2 = require('@iwharris/dicom-data-dictionary');
 const fs = require('fs');
 const path = require('path');
+const manager = require('simple-node-logger').createLogManager();
+const { createIndex } = require('./dicomIndex');
 
 // Per-file lock map to serialize concurrent recompression of the same file
 const fileLocks = new Map();
@@ -27,10 +29,15 @@ const opts = {
   fileNamePattern: 'roll-<DATE>.log',
   dateFormat: 'YYYY.MM.DD',
 };
-const manager = require('simple-node-logger').createLogManager();
 // manager.createConsoleAppender();
 manager.createRollingFileAppender(opts);
 const logger = manager.createLogger();
+
+// QIDO is answered from an index of the storage folder instead of a C-FIND to
+// our own DIMSE server (which forked the node process per query, see dicomIndex)
+const index = createIndex(config.get('storagePath'), (file, error) => {
+  logger.warn(`not indexed (${file}): ${error.message}`);
+});
 
 //------------------------------------------------------------------
 
@@ -59,90 +66,6 @@ const utils = {
   findDicomName,
   findVR,
   getLogger: () => logger,
-  startScp: () => {
-    const source = config.get('source');
-    const ar = config.get('peers');
-    const peers = [];
-    ar.forEach((aet) => {
-      peers.push(aet);
-    });
-
-    const ts = config.get('transferSyntax');
-    const j = {};
-    j.source = source;
-    j.target = j.source;
-    j.peers = peers;
-    j.peers.push(j.source);
-    j.storagePath = config.get('storagePath');
-    j.verbose = config.get('verboseLogging');
-    j.permissive = config.get('permissiveMode');
-    j.netTransferPrefer = ts;
-    j.netTransferPropose = ts;
-    j.writeTransfer = ts;
-
-    logger.info(`pacs-server listening on port: ${j.source.port}`);
-
-    dimse.startStoreScp(j, (result) => {
-      // currently this will never finish
-      logger.info(JSON.parse(result));
-    });
-  },
-  shutdown: () => {
-    const j = {};
-    j.source = config.get('source');
-    j.target = config.get('source');
-    j.verbose = config.get('verboseLogging');
-
-    logger.info(`sending shutdown request to target: ${j.target.aet}`);
-
-    return new Promise((resolve, reject) => {
-      dimse.shutdownScu(j, (result) => {
-        if (result && result.length > 0) {
-          try {
-            const res = JSON.parse(result);
-            if (res.code === 2) {
-              logger.error(res.message);
-            } else {
-              logger.info(res.message);
-            }
-            resolve();
-          } catch (error) {
-            logger.error(result);
-            reject();
-          }
-        }
-        reject();
-      });
-    });
-  },
-  sendEcho: () => {
-    const j = {};
-    j.source = config.get('source');
-    j.target = j.source;
-    j.verbose = config.get('verboseLogging');
-
-    logger.info(`sending C-ECHO to target: ${j.target.aet}`);
-
-    return new Promise((resolve, reject) => {
-      dimse.echoScu(j, (result) => {
-        if (result && result.length > 0) {
-          try {
-            const res = JSON.parse(result);
-            if (res.code === 2) {
-              logger.error(res.message);
-            } else {
-              logger.info(res.message);
-            }
-            resolve();
-          } catch (error) {
-            logger.error(result);
-            reject();
-          }
-        }
-        reject();
-      });
-    });
-  },
   fileExists: (pathname) =>
     new Promise((resolve, reject) => {
       fs.access(pathname, (err) => {
@@ -244,7 +167,7 @@ const utils = {
       });
     });
   },
-  doFind: (queryLevel, query, defaults) => {
+  doFind: async (queryLevel, query, defaults) => {
     // add query retrieve level
     const j = {
       tags: [
@@ -254,11 +177,6 @@ const utils = {
         },
       ],
     };
-
-    // set source and target from config
-    j.source = config.get('source');
-    j.target = j.source;
-    j.verbose = config.get('verboseLogging');
 
     // parse all include fields
     const includes = query.includefield;
@@ -307,37 +225,7 @@ const utils = {
     }
 
     const offset = query.offset ? parseInt(query.offset, 10) : 0;
-
-    // run find scu and return json response
-    return new Promise((resolve) => {
-      dimse.findScu(j, (result) => {
-        if (result && result.length > 0) {
-          try {
-            const json = JSON.parse(result);
-            if (json.code === 0) {
-              const container = JSON.parse(json.container);
-              if (container) {
-                resolve(container.slice(offset));
-              } else {
-                resolve([]);
-              }
-            } else if (json.code === 1) {
-              logger.info('query is pending...');
-            } else {
-              logger.error(`c-find failure: ${json.message}`);
-              resolve([]);
-            }
-          } catch (error) {
-            logger.error(error);
-            logger.error(result);
-            resolve([]);
-          }
-        } else {
-          logger.error('invalid result received');
-          resolve([]);
-        }
-      });
-    });
+    return index.query(queryLevel, j.tags, config.get('source').aet).slice(offset);
   },
 };
 module.exports = utils;

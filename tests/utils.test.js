@@ -11,11 +11,9 @@ const dimse = _require('dicom-dimse-native');
 const utils = _require('../src/utils');
 
 // Save originals so we can restore after each test
-const origFindScu = dimse.findScu;
 const origRecompress = dimse.recompress;
 
 afterEach(() => {
-  dimse.findScu = origFindScu;
   dimse.recompress = origRecompress;
 });
 
@@ -114,101 +112,6 @@ describe('fileExists', () => {
     ).rejects.toThrow();
   });
 });
-
-// ─── doFind ─────────────────────────────────────────────────────────
-
-describe('doFind', () => {
-  beforeEach(() => {
-    dimse.findScu = vi.fn();
-  });
-
-  it('should return parsed results on success', async () => {
-    const container = [
-      { '00100010': { Value: ['Test Patient'], vr: 'PN' } },
-    ];
-    dimse.findScu.mockImplementation((_j, cb) => {
-      cb(JSON.stringify({ code: 0, container: JSON.stringify(container) }));
-    });
-
-    const results = await utils.doFind('STUDY', {}, ['00100010']);
-    expect(results).toEqual(container);
-    expect(dimse.findScu).toHaveBeenCalledTimes(1);
-  });
-
-  it('should apply offset when provided', async () => {
-    const container = [
-      { '00100010': { Value: ['Patient A'], vr: 'PN' } },
-      { '00100010': { Value: ['Patient B'], vr: 'PN' } },
-      { '00100010': { Value: ['Patient C'], vr: 'PN' } },
-    ];
-    dimse.findScu.mockImplementation((_j, cb) => {
-      cb(JSON.stringify({ code: 0, container: JSON.stringify(container) }));
-    });
-
-    const results = await utils.doFind('STUDY', { offset: '1' }, ['00100010']);
-    expect(results).toHaveLength(2);
-    expect(results[0]['00100010'].Value[0]).toBe('Patient B');
-  });
-
-  it('should return empty array on error code', async () => {
-    dimse.findScu.mockImplementation((_j, cb) => {
-      cb(JSON.stringify({ code: 2, message: 'error' }));
-    });
-
-    const results = await utils.doFind('STUDY', {}, ['00100010']);
-    expect(results).toEqual([]);
-  });
-
-  it('should return empty array on invalid JSON', async () => {
-    dimse.findScu.mockImplementation((_j, cb) => {
-      cb('not valid json');
-    });
-
-    const results = await utils.doFind('STUDY', {}, ['00100010']);
-    expect(results).toEqual([]);
-  });
-
-  it('should return empty array on empty result', async () => {
-    dimse.findScu.mockImplementation((_j, cb) => {
-      cb('');
-    });
-
-    const results = await utils.doFind('STUDY', {}, ['00100010']);
-    expect(results).toEqual([]);
-  });
-
-  it('should include search params as DICOM tags', async () => {
-    dimse.findScu.mockImplementation((j, cb) => {
-      cb(JSON.stringify({ code: 0, container: '[]' }));
-    });
-
-    await utils.doFind('STUDY', { PatientName: 'Smith' }, ['00100010']);
-
-    const call = dimse.findScu.mock.calls[0][0];
-    const tagKeys = call.tags.map((t) => t.key);
-    expect(tagKeys).toContain('00080052'); // query retrieve level
-    expect(tagKeys).toContain('00100010'); // PatientName
-  });
-
-  it('should include includefield tags', async () => {
-    dimse.findScu.mockImplementation((j, cb) => {
-      cb(JSON.stringify({ code: 0, container: '[]' }));
-    });
-
-    await utils.doFind(
-      'STUDY',
-      { includefield: 'PatientBirthDate,PatientSex' },
-      [],
-    );
-
-    const call = dimse.findScu.mock.calls[0][0];
-    const tagKeys = call.tags.map((t) => t.key);
-    expect(tagKeys).toContain('00100030'); // PatientBirthDate
-    expect(tagKeys).toContain('00100040'); // PatientSex
-  });
-});
-
-// ─── compressFile ───────────────────────────────────────────────────
 
 describe('compressFile', () => {
   let tmpDir;

@@ -1,13 +1,13 @@
 # dicomweb-pacs
 
-An easy to use PACS with DICOMWEB and DIMSE service support
+An easy to use PACS with DICOMWEB support
 
 ## Description
 * A nodejs tool to easily spawn a PACS server including DICOM viewer connected via DICOMWEB (QIDO-RS and WADO-RS).
 * Comes preinstalled with the popular [OHIF DICOM Web Viewer](https://github.com/OHIF/Viewers) (version 3.10.1).
 * Supports OHIF MPR (vtk.js) feature for viewing volumetric datasets
 * multithreaded
-* sqlite backend
+* no database: QIDO is answered from an index of the storage folder
 
 No need for a server, try the [standalone desktop edition](https://github.com/knopkem/pacsnode).
 
@@ -31,7 +31,7 @@ No need for a server, try the [standalone desktop edition](https://github.com/kn
 
 * this will build the image and start the server with:
   * OHIF viewer on `http://localhost:5001`
-  * DIMSE SCP on port `8888` (AET: `DICOMWEB_PACS`)
+  * import with `docker compose exec dicomweb-pacs npm run import`
   * persistent volumes for `data/`, `logs/`, and `import/`
 
 * stop the server:
@@ -67,14 +67,14 @@ No need for a server, try the [standalone desktop edition](https://github.com/kn
 * run:
   ```npm start```
 
-* run tests:
+* import DICOM images: put DICOM files into the import directory and run  
+  ```npm run import``` (or ```npm run import -- <folder>```)  
+  Files are copied to the storage path as `<StudyInstanceUID>/<SOPInstanceUID>`;
+  the server does not need to be running and picks new studies up on the next query.
+  There is no DIMSE (C-STORE/C-FIND) server: QIDO is answered from an index of the storage folder.
+
+* run the tests  
   ```npm test```
-
-* import DICOM images: use any c-store-scu to push to internal store-scp  
-  ```(AET: DICOMWEB_PACS   port: 8888)```
-
-* (or use internal store-scu): put DICOM into import directory and run  
-  ```npm run import``` (server needs to be running)
 
 * open webbrowser and start viewing  
   ```http://localhost:5001```
